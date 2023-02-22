@@ -1,6 +1,6 @@
 /*
  * File: 102-print_comb5.c
- * Auth: Brennan D Baraban
+ * Auth: wangutusi arshton
  */
 
 #include <stdio.h>
