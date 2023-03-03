@@ -1,26 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
-void printnumber(int n)
+/**
+ * print_number -print number putchar
+ * @n:integer
+ * Return: void
+ */
+void print_number(int n)
 {
+	unsigned int x = n;
 
-   if (n < 0) {
-       putchar('-');
-       n = -n;
-   }
+	if (n < 0)
+	{
+		_putchar('-');
+		x = -x;
+	}
+	if ((x / 10) > 0)
+		print_number(x / 10);
 
-   if (n == 0)
-      putchar('0');
-
-   if (n/10)
-      printnumber(n/10);
-
-   putchar(n%10 + '0');
-}
-
-int main(int argc, char** argv)
-{
-   int n = atoi(argv[1]);
-   printnumber(n);
-   printf("\n");
+	_putchar(x % 10 + '0');
 }
