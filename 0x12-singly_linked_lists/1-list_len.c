@@ -5,7 +5,7 @@
 
 
 /**
-* list_len - check the code for ALX School students.
+* list_len.
 * @h: name of the list
 * Return: the number of nodes.
 */
