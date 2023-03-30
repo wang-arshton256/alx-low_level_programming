@@ -19,7 +19,9 @@ int _strlen(const char *s)
        i++;
    }
    return (i);
+
 }
+
 /**
 * add_node - add a new node at beginning of a list_t list.
 * @head: head of a list_t list.
