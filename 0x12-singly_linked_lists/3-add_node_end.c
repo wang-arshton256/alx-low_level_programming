@@ -5,6 +5,7 @@
 
 /**
 * _strlen - finds the length of a string
+*
 * @str: string to find the length of
 *
 * Return: length of string
