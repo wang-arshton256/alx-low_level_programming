@@ -3,19 +3,19 @@
 
 /**
  * binary_to_uint - Converts a binary number to unsigned int.
- * @bin: a pointer to a string
- * Return: return converted no.
+ * @b: a pointer to a string
+ * Return: return converted number.
  */
 
-unsigned int binary_to_uint(const char *bin)
+unsigned int binary_to_uint(const char *b)
 {unsigned int value = 0;
-	 int wang = 0;
-	if (bin == NULL)
+	 int w = 0;
+	if (b == NULL)
 	return (0);
-	while (bin[wang] == '0' || bin[wang] == '1')
+	while (b[w] == '0' || b[w] == '1')
 {value <<= 1;
-	value += bin[wang] - '0';
-	wang++;
+	value += b[w] - '0';
+	w++;
 }
 	return (value);
 }
