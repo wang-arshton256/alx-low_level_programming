@@ -8,20 +8,14 @@
  */
 
 unsigned int binary_to_uint(const char *bin)
-{
- 	 unsigned int value = 0;
- 		 int wang = 0;
-
-  	if (bin == NULL)
-
-    return 0;
-
-  	while (bin[wang] == '0' || bin[wang] == '1')
-  	{ 
-    		value <<= 1;
-    	value += bin[wang]-'0';
-    	wang++;
+{unsigned int value = 0;
+	 int wang = 0;
+	if (bin == NULL)
+	return (0);
+	while (bin[wang] == '0' || bin[wang] == '1')
+{value <<= 1;
+	value += bin[wang] - '0';
+	wang++;
 }
-
-  return value;
+	return (value);
 }
