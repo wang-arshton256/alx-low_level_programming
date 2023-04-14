@@ -10,18 +10,18 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t ox, p, q;
-	char *bafa;
+	ssize_t o, p, q;
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
 
-	bafa = malloc(sizeof(char) * letters);
-	if (bafa == NULL)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 		return (0);
 
 	o = open(filename, O_RDONLY);
-	p = read(o, bafa, letters);
+	p = read(o, buffer, letters);
 	q = write(STDOUT_FILENO, buffer, p);
 
 	if (o == -1 || p == -1 || q == -1 || q != p)
@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	free(bafa);
+	free(buffer);
 	close(o);
 
 	return (q);
