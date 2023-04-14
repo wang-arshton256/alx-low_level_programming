@@ -28,7 +28,7 @@ void check_elf_file(unsigned char *e_ident)
 {
 	int start;
 
-	for (start = 0; start < 4; index++)
+	for (start = 0; start < 4; start++)
 	{
 		if (e_ident[start] != 127 &&
 		    e_ident[start] != 'E' &&
