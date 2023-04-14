@@ -7,29 +7,31 @@
  * @letters: The number of letters to read and print
  * Return: return actual number of bytes
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
-{	int mbabazi;
-	ssize_t kws, seeta;
-	char *mize;
+{
+	ssize_t ox, p, q;
+	char *bafa;
 
-	if (!filename)
+	if (filename == NULL)
 		return (0);
 
-	mbabazi = open(filename, O_RDONLY);
-
-	if (mbabazi == -1)
+	bafa = malloc(sizeof(char) * letters);
+	if (bafa == NULL)
 		return (0);
 
-	mize = malloc(sizeof(char) * (letters));
-	if (!mize)
+	o = open(filename, O_RDONLY);
+	p = read(o, bafa, letters);
+	q = write(STDOUT_FILENO, buffer, p);
+
+	if (o == -1 || p == -1 || q == -1 || q != p)
+	{
+		free(buffer);
 		return (0);
+	}
 
-	kws = read(mize, mize, letters);
-	seeta = write(STDOUT_FILENO, mize, kws);
+	free(bafa);
+	close(o);
 
-	close(mbabazi);
-
-	free(mize);
-
-	return (seeta);
+	return (q);
 }
