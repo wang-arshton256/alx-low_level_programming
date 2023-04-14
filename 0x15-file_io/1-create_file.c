@@ -7,33 +7,28 @@
  *
  * Return: 1 if it success. -1 if it fails.
  */
+
+
 int create_file(const char *filename, char *text_content)
 {
-	int kws;
-	int lxt;
-	int writtings;
-	
+	int j, d, len = 0;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
-	kws = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (text_content != NULL)
+	{
+		for (len = 0; text_content[len];)
+			len++;
+	}
 
-	if (kws == -1)
+	j = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	d = write(j, text_content, len);
+
+	if (j == -1 || d == -1)
 		return (-1);
 
-	if (!text_content)
-		text_content = "";
-
-	for (writtings = 0; text_content[writtings]; writtings++)
-		;
-
-	lxt = write(kws, text_content, writtings);
-
-	if (lxt == -1)
-		return (-1);
-
-	close(kws);
+	close(j);
 
 	return (1);
 }

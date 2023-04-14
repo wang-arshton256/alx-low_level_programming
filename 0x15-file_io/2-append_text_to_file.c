@@ -9,34 +9,27 @@
  * or if it fails.
  */
 
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int kws;
-	int lxt
-	int writtings;
-	
+	int p, q, len = 0;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
-	kws = open(filename, O_WRONLY | O_APPEND);
-
-	if (kws == -1)
-		return (-1);
-
-	if (text_content)
+	if (text_content != NULL)
 	{
-		for (writtings = 0; text_content[writtings]; writtings++);
-			
-
-		lxt = write(kws, text_content, writtings);
-
-		if (lxt == -1)
-			return (-1);
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
-	close(kws);
+	p = open(filename, O_WRONLY | O_APPEND);
+	q = write(p, text_content, len);
+
+	if (p == -1 || q == -1)
+		return (-1);
+
+	close(p);
 
 	return (1);
 }
-
