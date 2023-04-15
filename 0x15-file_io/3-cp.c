@@ -32,7 +32,6 @@ char *create_buffer_allocator(char *file)
  * close_file_desc - Closes file descriptors.
  * @fd: The file descriptor to be closed.
  */
- 
 void close_file_desc(int fd)
 {
 	int c;
