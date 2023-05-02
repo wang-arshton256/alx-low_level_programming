@@ -54,7 +54,7 @@ At Alx School, there are several tracks to become a full stack software engineer
 
 0x0F - variadic_functions
 
-0x10 - printf ** printf project **
+0x10 - printf (printf project) 
 
 0x11 - singly_linked_lists
 
@@ -64,16 +64,16 @@ At Alx School, there are several tracks to become a full stack software engineer
 
 0x14 - file_io
 
-0x15 - simple_shell ** C Shell project **
+0x15 - simple_shell (C Shell project)
 
 0x16 - doubly_linked_lists
 
 0x17 - dynamic_libraries
 
-0x18 - stacks_queues_lifo_fifo ** Monty ByteCode Interpreter **
+0x18 - stacks_queues_lifo_fifo (Monty ByteCode Interpreter)
 
 0x19 - hash_tables
 
-0x1A - sorting_algorithms ** Sorting algorithms project **
+0x1A - sorting_algorithms (Sorting algorithms project)
 
-0x1B - makefiles **
+0x1B - makefiles 
