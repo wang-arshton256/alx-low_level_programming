@@ -3,7 +3,7 @@
 
 
 /**
- *read_textfile- Reads the text file print to STDOUT.
+ *read_textfile - Reads the text file print to STDOUT.
  *@letters: These are the number of letters to be read by the function
  *@filename: This is the text file being read
  *Returns: j- the number of bytes read and printed
