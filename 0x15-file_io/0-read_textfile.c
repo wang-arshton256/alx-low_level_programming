@@ -3,11 +3,11 @@
 
 
 /**
- *read_textfile - Reads the text file print to STDOUT.
- *@letters: These are the number of letters to be read by the function
- *@filename: This is the text file being read
- *Returns: j- the number of bytes read and printed
- *0 when function fails or when the filename is Null.
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @letters: These are the number of letters to be read by the function
+ * @filename: This is the text file being read
+ * Return: If the function fails or filename is NULL - 0.
+ *         ryt - the actual number of bytes the function can read and print.
  */
 
 

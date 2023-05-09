@@ -19,7 +19,7 @@ CreateBuf(char *file)
 
 	if (buf == NULL)
 	{
-		myprintf(STDERR_FILENO,
+		dprintf(STDERR_FILENO,
 				"Error: Can not write to %s\n", file);
 		exit(99);
 	}
@@ -39,7 +39,7 @@ void Closefile(int wang)
 
 	if (clz == -1)
 	{
-		myprintf(STDERR_FILENO, "Error: Can not close wang %d\n", wang);
+		dprintf(STDERR_FILENO, "Error: Can not close wang %d\n", wang);
 		exit(100);
 	}
 }
@@ -61,7 +61,7 @@ int main(int args, char *argv[])
 
 	if (args != 3)
 	{
-		myprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -73,7 +73,7 @@ int main(int args, char *argv[])
 	do {
 		if (from == -1 || rid == -1)
 		{
-			myprintf(STDERR_FILENO,
+			dprintf(STDERR_FILENO,
 					"Error: Can not read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
@@ -82,7 +82,7 @@ int main(int args, char *argv[])
 		ryt = write(to, buf, rid);
 		if (to == -1 || ryt == -1)
 		{
-			myprintf(STDERR_FILENO,
+			dprintf(STDERR_FILENO,
 					"Error: Can not write to %s\n", argv[2]);
 			free(buf);
 			exit(99);
@@ -91,7 +91,7 @@ int main(int args, char *argv[])
 		rid = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
-	} while (r > 0);
+	} while (rid > 0);
 
 	free(buf);
 	Closefile(from);
