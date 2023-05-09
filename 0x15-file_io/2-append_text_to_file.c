@@ -2,8 +2,8 @@
 
 /**
  * append_text_to_file - Appends text at the end of the file.
+ * @filename: A pointer to the name of the file to be appended.
  * @text_content: The string to be added to the end of the file.
- * @filename: A pointer to the name of the file to be appended to.
  * Return: If the function fails or or filename is NULL - -1. & If
  * the user doesn't have write permissions - -1,otherwise - 1.
  */
