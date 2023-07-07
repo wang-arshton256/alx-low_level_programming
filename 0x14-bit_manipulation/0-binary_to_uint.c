@@ -4,7 +4,7 @@
  * binary-to-uint : COnverts a binary number to unsigned int
  * @b: String Containing The binary number
  *
- * Return: The converted number
+ * Return: the converted numb
  */
 unsigned int binary_to_uint(const char *b)
 {
