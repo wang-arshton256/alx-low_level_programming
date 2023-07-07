@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_binary: Prints the binary representation
+ * print_binary - Prints the binary representation
  * of a number.
- * @n: unsigned long int.
+ * @n: Unsigned long int.
  *
  * Return: no return.
  */
